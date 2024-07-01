@@ -1,0 +1,36 @@
+<%- include('header', { currentPage: 'add' }); -%>
+    <div id="colorlib-main">
+        <section class="ftco-section pt-4 mb-5 ftco-intro">
+            <div class="container-fluid px-3 px-md-0">
+                <h3>Search a book</h3>
+                <hr>
+                <form class="form-block" id="book-form" action="/search" method="POST">
+                    <input type="text" id="term" name="term" value="" placeholder="Search..." required></br></br>
+                    <input type="submit" name="search" id="search" value="Search"/>
+                    <input type="checkbox" id="byYear" name="byYear" />
+                    <label for="byYear">Sort by year</label>
+                </form>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Book Id</th>
+                            <th>Title</th>
+                            <th>Synopsis</th>
+                            <th>Author</th>
+                            <th>Year</th>
+                            <th>Genre</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <% for(const obj of output){ %>
+                        <tr>
+                        <% for(const key in obj) { %>
+                        <td><%= obj[key] %></td>
+                        <% } %>
+                        </tr>
+                        <% } %>                
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>

@@ -1,0 +1,23 @@
+<html lang="en">
+<!doctype html>
+<head>
+    <title>Ebook Library</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/new.css">
+ 
+</head>
+<body>
+        <nav id="main-menu" role="navigation">
+            <img src="https://freesvg.org/img/StackOfBooks.png" class="center">
+            <ul>
+                <li <%if (currentPage == 'home') { %>class="active"<% } %>><a href="/">Home</a></li>
+                <li <%if (currentPage == 'search') { %>class="active"<% } %>><a href="/search">Search Ebook</a></li>
+                <li <%if (currentPage == 'all') { %>class="active"<% } %>><a href="/all">View All</a>
+                </li>
+                <li <%if (currentPage == 'add') { %>class="active"<% } %>><a href="/add-new">Add Ebook</a></li> 
+            </ul>
+        </nav>
+    <main>
